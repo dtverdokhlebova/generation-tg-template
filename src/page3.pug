@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Index'
+  -const wrapperMods = 'wrapper--dark wrapper--bg-img'
+  -const headerMods = 'header--light'
+
+  -
+    const dataAbout ={
+      img: 'img/about_img3.webp',
+    }
+
+block content
+  main.main
+    .inner
+      +about(dataAbout)

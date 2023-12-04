@@ -1,0 +1,14 @@
+// fonts
+$font: 'Inter', 'Arial', sans-serif;
+$fs: 16px;
+
+// colors
+$black: #1d1d1d;
+$blue: #1d87ff;
+
+@function get-vw($px, $width) {
+  @return calc($px / $width * 1vw);
+}
+@function rem($size) {
+  @return calc($size / $fs) * 1rem;
+}

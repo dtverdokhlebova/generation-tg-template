@@ -1,0 +1,23 @@
+mixin about(data, mods)
+  -
+    const baseName = 'about'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .about(class=allMods)&attributes(attributes)
+    h1.about__h1 Делимся 9&nbsp;летним опытом команды по&nbsp;продвижению, прямо в&nbsp;телеграмм канале!
+    +ui-ul('', 'about')
+      li Выкладываем свежие кейсы по&nbsp;Яндексу и&nbsp;ВК
+      li Считаем эффективность по&nbsp;«чистой прибыли» с&nbsp;рекламы
+      li Проводим онлайн разборы ваших кабинетов
+    .about__img(class=data.imgMods)
+      img(src=data.img, alt='')
+    .about__descr Всем подписчикам дарим Гайд «Как самостоятельно за&nbsp;5&nbsp;минут проверить ведение вашей рекламной кампании в&nbsp;Яндекс Директ»
+    +ui-button('Перейти на канал', true, `about, --glare ${data.buttonMods ? data.buttonMods : ''}`)
+    block

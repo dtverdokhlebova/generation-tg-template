@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Index'
+
+  -
+    const dataAbout ={
+      img: 'img/about_img2.png',
+      imgMods: 'about__img--w-s about__img--br50',
+      buttonMods: ', --br-xl',
+    }
+
+block content
+  main.main
+    .inner
+      +about(dataAbout)

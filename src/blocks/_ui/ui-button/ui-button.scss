@@ -1,0 +1,60 @@
+.ui-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10px);
+  padding: rem(15px) rem(25px) rem(17px);
+  font-weight: 700;
+  font-size: rem(12px);
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: $blue;
+  border: 0;
+  border-radius: rem(5px);
+  transition: 0.3s;
+  cursor: pointer;
+  &__icon {
+    flex-shrink: 0;
+    width: rem(16px);
+    height: rem(16px);
+  }
+  &:active {
+    background: #77afef;
+    transition: 0.15s linear;
+  }
+  &--br-xl {
+    border-radius: rem(60px);
+  }
+  &--glare {
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: skewX(-36deg);
+      width: rem(36px);
+      height: 100%;
+      background: linear-gradient(215deg, #eaeaea 20.46%, rgb(255 255 255 / 0) 92%);
+      animation: glare 3s ease-in-out 0.4s infinite;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes glare {
+  0% {
+    left: 5%;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    left: 110%;
+  }
+  100% {
+    left: 110%;
+  }
+}

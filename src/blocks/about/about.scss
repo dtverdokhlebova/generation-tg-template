@@ -1,0 +1,58 @@
+.about {
+  &__h1 {
+    margin: 0 0 rem(10px);
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: 1.25;
+  }
+  &__ui-ul {
+    font-weight: 500;
+    font-size: rem(12px);
+    line-height: 1.25;
+    &:not(:last-child) {
+      margin-bottom: rem(20px);
+    }
+  }
+  &__descr {
+    font-weight: 500;
+    font-size: rem(10px);
+    line-height: 1.25;
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+  }
+  &__img {
+    position: relative;
+    margin: 0 auto;
+    img {
+      position: relative;
+      border-radius: rem(10px);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20px);
+    }
+    &--w-s {
+      max-width: rem(220px);
+    }
+    &--w-xs {
+      max-width: rem(180px);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 110%;
+        height: 110%;
+        background: #134884;
+        filter: blur(78px);
+      }
+    }
+    &--br50 {
+      border-radius: 50%;
+    }
+  }
+  &__ui-button {
+    width: 100%;
+  }
+}

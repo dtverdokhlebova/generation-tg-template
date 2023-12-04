@@ -1,0 +1,13 @@
+.header {
+  padding: rem(12px) 0;
+  background: #fbfbfb;
+  &__logo {
+    display: block;
+    width: rem(94px);
+    margin: 0 auto;
+    color: inherit;
+  }
+  &--light {
+    background: transparent;
+  }
+}

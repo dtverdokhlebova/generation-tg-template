@@ -1,0 +1,15 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Index'
+
+  -
+    const dataAbout ={
+      img: 'img/about_img1.webp',
+      buttonMods: ', --br-xl',
+    }
+
+block content
+  main.main
+    .inner
+      +about(dataAbout)
