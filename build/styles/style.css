@@ -42,15 +42,6 @@ body {
   margin: 0;
 }
 
-img,
-svg {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  image-rendering: -webkit-optimize-contrast;
-}
-
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -75,6 +66,14 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.wrapper img,
+.wrapper svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .main {

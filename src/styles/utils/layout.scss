@@ -15,14 +15,6 @@ body {
   -webkit-tap-highlight-color: transparent;
   margin: 0;
 }
-img,
-svg {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  image-rendering: -webkit-optimize-contrast;
-}
 
 // defaults
 .wrapper {
@@ -43,6 +35,14 @@ svg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  img,
+  svg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 .main {
